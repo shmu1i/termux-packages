@@ -1,0 +1,5 @@
+--- a/src/cache_cf.cc
++++ b/src/cache_cf.cc
+@@
+-    if (geteuid() == 0) {
++    if (geteuid() == 000000000) {
