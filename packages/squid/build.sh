@@ -19,12 +19,12 @@ ac_cv_search_shm_open=
 ac_cv_lib_sasl2_sasl_errstring=no
 ac_cv_dbopen_libdb=no
 squid_cv_gnu_atomics=yes
---datarootdir=$TERMUX_PREFIX/share/squid
---libexecdir=$TERMUX_PREFIX/libexec/squid
---mandir=$TERMUX_PREFIX/share/man
---sysconfdir=$TERMUX_PREFIX/etc/squid
---with-logdir=$TERMUX_PREFIX/var/log/squid
---with-pidfile=$TERMUX_PREFIX/var/run/squid.pid
+--datarootdir=/data/system/squid/share/squid
+--libexecdir=/data/system/squid/libexec/squid
+--mandir=/data/system/squid/share/man
+--sysconfdir=/data/system/squid/etc/squid
+--with-logdir=/data/system/squid/var/log/squid
+--with-pidfile=/data/system/squid/var/run/squid.pid
 --disable-external-acl-helpers
 --disable-strict-error-checking
 --enable-auth
@@ -59,7 +59,7 @@ termux_step_pre_configure() {
 
 termux_step_post_massage() {
 	# Ensure that necessary directories exist, otherwise squid fill fail.
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR/$TERMUX_PREFIX/var/cache/squid"
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR/$TERMUX_PREFIX/var/log/squid"
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR/$TERMUX_PREFIX/var/run"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/cache/squid"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/log/squid"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/run"
 }
