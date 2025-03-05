@@ -1,5 +1,11 @@
---- a/src/cache_cf.cc
-+++ b/src/cache_cf.cc
-@@
+--- cache_cf.cc	2025-03-05 12:05:01.292922300 -0500
++++ newcache_cf.cc	2025-03-05 12:08:39.844701700 -0500
+@@ -896,7 +896,7 @@
+     // TODO: replace with a dedicated "purge" ACL option?
+     Config2.onoff.enable_purge = (ACLMethodData::ThePurgeCount > 0);
+ 
 -    if (geteuid() == 0) {
-+    if (geteuid() == 000000000) {
++    if (geteuid() == 999990) {
+         if (nullptr != Config.effectiveUser) {
+ 
+             struct passwd *pwd = getpwnam(Config.effectiveUser);
