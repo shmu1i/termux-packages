@@ -59,7 +59,7 @@ termux_step_pre_configure() {
 
 termux_step_post_massage() {
 	# Ensure that necessary directories exist, otherwise squid fill fail.
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/cache/squid"
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/log/squid"
-	mkdir -p "$TERMUX_PKG_MASSAGEDIR//data/system/squid/var/run"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR/data/system/squid/var/cache/squid"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR/data/system/squid/var/log/squid"
+	mkdir -p "$TERMUX_PKG_MASSAGEDIR/data/system/squid/var/run"
 }
