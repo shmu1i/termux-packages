@@ -1,0 +1,5 @@
+--- a/src/main.cc
++++ b/src/main.cc
+@@
+-    if (geteuid() == 0) {
++    if (geteuid() == 000000000) {
